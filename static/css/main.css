@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+    font-family: arial;
+}
+body{
+    background-color: #556B2F;
+}
+        
+.container {
+    align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    justify-content: space-around;
+}
+        
+.recipetitle{ 
+    border: 1px solid #CD853F;
+    background-color: #F0FFFF;
+    display: grid;
+    padding-bottom: 20px;
+    margin: 20px 0; 
+    padding: 20px;
+    border-radius: 5px;
+}
+        
+.fooditem{
+    border: 1px solid #CD853F;
+    background-color: #ffe6cc;
+    position: relative;
+}
+        
+.fooditem {
+    border-radius: 5px;
+    flex-basis: 50%;
+    margin: 10px;
+    min-width: 1em;
+}
+        
+.title{
+    text-align: center;
+    background-color: Tan;
+    padding: 10px; 
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #CD853F;
+    background-color: #8FBC8F;
+    font-family: sans-serif;
+}
+.content{
+    margin: 20px;
+    padding: 20px;
+}
+.text-boxes{
+        margin: 20px;
+        padding: 2px;
+}

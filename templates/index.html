@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">Vegan Food Recipes!</span>
+        </nav>
+        <div class="container">
+            <div class="recipetitle">
+                <div class="title"><h3>{{food_title}}</h3></div>
+                <div class="text-boxes"><image class="foodimg" src="{{food_photo}}" /></div>
+                <div class="title"><h3>Ingredients</h3></div>
+                    <div class="text-boxes">
+                        <h3>Preperation time: {{food_prep_time}} minutes</h3>
+                        {%for i in range(0, len)%} 
+                            <li>{{food_ingredients[i]}}</li> 
+                        {%endfor%}
+                    </div>
+                <div class="title"><h3>Related Posts</h3></div>
+                <div class="container">
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                        <h5 class="card-title">{{random_tweet[0]}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{random_tweet[1]}}</h6>
+                        <p class="card-text">{{random_tweet[2]}}</p></p>
+                        <a href="{{random_tweet[3]}}">link</a>
+                    </div>
+                </div>
+                </div>
+                <div class="title"><h3>For more info</h3></div>
+                    <a href="{{food_link}}">{{food_link}}</a>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</html>
